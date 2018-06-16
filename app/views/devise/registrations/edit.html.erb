@@ -35,7 +35,7 @@
               <div class="col-sm-8">
                 <h4>Change my Password</h4>
                 <br>
-                Update the password you use to login to your Wefactoryou account.
+                Update the password you use to login to your Wefactor account.
               </div>
                           
           <br>
@@ -49,7 +49,7 @@
 
             <h4>Cancel my account</h4><small>You are not subscribed to a plan.</small>
 
-            <p><small><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary" %></small></p>
+            <p><small><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure you want to cancel your account?" }, method: :delete, class: "btn btn-primary" %></small></p>
 
             <small><%= link_to "Back", :back %></small>
             <br>

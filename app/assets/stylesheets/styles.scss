@@ -8,8 +8,7 @@ $green:                           #72e999;
 $yellow:                          #ffbe5d;
 $purple:                          #ad97ef;
 $pink:                            #ff94c5;
-$grey:                            #e8e8e8;
-$border:                          #dce0e0;
+$border:                          #e8e8e8;
 $background:                      #f9f9fa;
 
 /* GENERAL */
@@ -104,7 +103,7 @@ body {
 }
 
 .dropdown-menu > li > a:hover {
-  background-color: $grey;
+  background-color: $border;
   background-image: none;
 }
 
@@ -190,7 +189,7 @@ body {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  border: 3px solid $grey;
+  border: 3px solid $border;
 }
 
 
@@ -250,7 +249,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   width: 100%;
   max-width: 100%;
   height: 3.5em;
-  border: 3px solid $grey;
+  border: 3px solid $border;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -267,7 +266,7 @@ textarea {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 3px solid $grey !important;
+  border: 3px solid $border !important;
 }
 
 input[type="submit"], .button {
@@ -305,7 +304,7 @@ select {
   width: 100%;
   max-width: 100%;
   height: 3em;
-  border: 1px solid $grey;
+  border: 1px solid $border;
   padding: 0.5em;
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
@@ -336,7 +335,7 @@ input[type="checkbox"] {
   margin-bottom: -0.25em;
   margin-right: 5px;
   vertical-align: top;
-  border: 1px solid $grey;
+  border: 1px solid $border;
   border-radius: 0.25rem;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
