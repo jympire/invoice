@@ -11,8 +11,12 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Log In", new_user_session_path %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path, class: "text-primary" %></li>
+        <% if (!user_signed_in?) %>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path, class: "text-primary" %></li>
+        <% else %>
+        <li><%= link_to('Sign out', destroy_user_session_path, method: :delete) %></li>
+        <% end %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
