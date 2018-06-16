@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'press' , to: 'pages#press'
 
-  get 'faq' , to: 'pages#faq'
+  get '/support/faq' , to: 'pages#faq'
 
   get 'client-stories', to: 'pages#client_stories'
 
@@ -25,7 +25,8 @@ Rails.application.routes.draw do
 
   devise_for :users,
              path: '',
-             path_names: {sign_in: 'login', sign_out: 'logout', edit: 'edit', sign_up: 'register'}
+             path_names: {sign_in: 'login', sign_out: 'logout', edit: 'edit', sign_up: 'register'},
+             controllers: {registrations: 'registrations'}
   
   resources :users, only: [:show]
 end
