@@ -5,7 +5,7 @@
         <div class="container">
           <h3><strong>Edit My Profile</strong></h3>
           
-          <%= link_to "View My Profile", user_path(current_user), class: "underline" %>
+          <%= link_to "View My Profile", user_path(current_user), class: "small" %>
           
           <br>
            
@@ -19,7 +19,7 @@
              
               <div class="col-sm-6">
                 <span><%= current_user.first_name %> <%= current_user.last_name %> <br>
-                Manage your avatar using <a href="https://en.gravatar.com" class="underline" target="_blank">Gravatar</a>.</span> 
+                <small>Manage your avatar using</small> <a href="https://en.gravatar.com" class="underline small" target="_blank">Gravatar</a>.</span> 
               </div>
                           
           <br>
@@ -35,7 +35,7 @@
               <div class="col-sm-8">
                 <h4>Change my Password</h4>
                 <br>
-                Update the password you use to login to your Wefactor account.
+                <small>Update the password you use to login to your Wefactor account.</small>
               </div>
                           
           <br>
@@ -131,16 +131,19 @@
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
               <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
             <% end %>
-
+            
             <div class="form-group">
+              <%= f.label :New_Password %><br />
               <%= f.password_field :password, autocomplete: "off", placeholder: "New Password (leave blank if you don't want to change it)", class: "form-control" %>
             </div>
 
             <div class="form-group">
+              <%= f.label :New_Password_Confirmation %><br />
               <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password", class: "form-control" %>
             </div>
 
             <div class="field">
+              <%= f.label :Current_Password %><br />
               <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current Password (we need your current password to confirm your changes)", class: "form-control" %>
             </div>
           

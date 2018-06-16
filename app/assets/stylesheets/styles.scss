@@ -50,6 +50,11 @@ body {
   .text-primary {
     color: #3ca8ff !important;
   }
+  
+  hr {
+    border: 1px solid $border;
+    margin-bottom: 25px;
+  }
 }
 
 
