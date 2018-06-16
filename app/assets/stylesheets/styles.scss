@@ -1,0 +1,122 @@
+/* GENERAL */
+body {
+  font-family: "proxima-nova",sans-serif;
+  color: $dark;
+  font-size: 14px;
+  line-height: 1.75;
+  font-weight: 400;
+  margin: 0;
+  min-height: 100%;
+  background-color: $white;
+  
+  h3 {
+    font-weight: 600;
+  }
+  
+  .container {
+    width: 95%;
+  }
+
+  .container.content {
+    min-height: 680px;
+    padding-top: 50px;
+  }
+  
+  .no-bullet {
+    li {
+      list-style: none !important;
+      text-decoration: none !important
+    }
+  }
+}
+
+
+/* NAVBAR */
+.navbar {
+  background-color: $white;
+  padding-top: 15px;
+  
+  .dropdown-menu hr {
+    margin: 8px;
+  }
+}
+
+.navbar-default {
+  background-color: $white !important;
+  border-radius: 0px;
+  border: none;
+}
+
+.navbar .navbar-nav li a {
+  color: $dark;
+  font-size: 13px;
+  vertical-align: middle !important;
+}
+
+.navbar .navbar-nav li a:hover {
+  color: $primary;
+  vertical-align: middle !important;
+}
+
+.navbar-default .navbar-brand {
+  color: $dark;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  
+  &:hover {
+    color: $dark;
+  }
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: $grey;
+  background-image: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $dark;
+}
+
+.navbar-default .navbar-toggle {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border: none;
+} 
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: $white;
+}
+
+.navbar .navbar-nav > li.open > a:hover,
+.navbar .navbar-nav > li.open > a:focus,
+.navbar .navbar-nav > li.open > a:active {
+  background-color: $white;
+}
+
+
+/* FOOTER */
+.footer {
+  width: 100% !important;
+  margin-top: 100px;
+  border-top: 1px solid $border;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  max-height: 250px;
+  
+  li {
+    padding-right: 20px;
+    padding-bottom: 5px;
+    font-size: 0.85em !important;
+  }
+}
+
+
+/* TABLE */
+
+th {
+  font-weight: 300;
+  color: $primary;
+}
