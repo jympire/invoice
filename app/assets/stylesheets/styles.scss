@@ -4,10 +4,10 @@ $dark:                            #28384d;
 $medium:                          #767676;
 $light:                           #9a9da4;
 $primary:                         #3ca8ff;
-$green:                           #72e999;
-$yellow:                          #ffbe5d;
-$purple:                          #ad97ef;
-$pink:                            #ff94c5;
+$myGreen:                         #72e999;
+$myYellow:                        #ffbe5d;
+$myPurple:                        #ad97ef;
+$myPink:                          #ff94c5;
 $border:                          #e8e8e8;
 $background:                      #f9f9fa;
 
@@ -35,6 +35,10 @@ body {
     padding-top: 50px;
   }
   
+  .dashboard {
+    min-height: 680px;
+  }
+  
   .container.content.devise {
     min-height: 680px;
     padding-top: 100px;
@@ -42,7 +46,11 @@ body {
   
   
   .text-primary {
-    color: #3ca8ff !important;
+    color: $primary !important;
+  }
+  
+  .text-white {
+    color: $white;
   }
   
   hr {
@@ -80,8 +88,16 @@ body {
   border-radius: 0px;
   border: none;
   border-bottom: 3px solid $border;
+  padding-top: 10px;
+}
+
+.nav-dashboard {
+  background-color: $white !important;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid $border;
   padding-top: 15px;
-  padding-bottom: 5px;
+  height: 60px;
 }
 
 .navbar .navbar-nav li a {
@@ -137,7 +153,7 @@ body {
 /* FOOTER */
 .footer {
   width: 100% !important;
-  margin-top: 100px;
+  margin-top: 18px;
   border-top: 1px solid $border;
   padding-top: 30px;
   padding-bottom: 25px;
@@ -169,21 +185,21 @@ body {
 .alert.devise{
   margin-bottom: 20px;
   list-style: none;
-  color: $pink;
+  color: $myPink;
 }
 
 .alert.alert-info {
-  background-color: #3ca8ff !important;
+  background-color: $myGreen !important;
   color: $white !important;
 }
 
 .alert.alert-success {
-  background-color: #72e999 !important;
+  background-color: $myGreen !important;
   color: $white !important;
 }
 
 .alert.alert-danger {
-  background-color: #ad97ef !important;
+  background-color: $myPurple !important;
   color: $white !important;
 }
 
@@ -361,7 +377,7 @@ input[type="checkbox"]:checked:before {
 }
 
 
-/* Avatar */
+/* AVATAR */
 .avatar-tiny {
   width: 20px;
   border: 1px solid $border;
@@ -387,7 +403,7 @@ input[type="checkbox"]:checked:before {
 }
 
 
-/* Sidebar */
+/* SIDEBAR */
 .sidebar-list {
   padding: 0;
   list-style: none;
@@ -412,4 +428,37 @@ input[type="checkbox"]:checked:before {
   color: $dark;
   font-weight: bold;
   text-decoration: none;
+}
+
+
+/* SIDE MENU */
+#sideMenu {
+  background-color: $primary;
+  width: 240px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  
+  nav {
+    padding-top: 25px;
+    a {
+      display: block;
+      color: $white;
+      text-decoration: none;
+      padding: 15px 30px;
+      transition: all 0.3s ease-in-out;
+      
+      &:hover {
+        border-left: 5px solid $myGreen;
+        padding: 15px 30px 15px 25px;
+      }
+      
+      &.active {
+        background: $white;
+        color: $primary;
+        border-left: 5px solid $myGreen;
+        padding: 15px 30px 15px 25px;
+      }
+    }
+  }
 }

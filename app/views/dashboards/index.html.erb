@@ -1,0 +1,39 @@
+<div class="dashboard">
+  <section id="sideMenu">
+    <nav>
+      <center><%= image_tag avatar_url(current_user), class: "img-circle avatar-large" %></center>
+      <br>
+      <center class="text-white small"><%= current_user.first_name %> <%= current_user.last_name %></center>
+      <% if !current_user.title.blank? %>
+      <center class="text-white small"><%= current_user.title %></center>
+      <% end %>
+      <br><br>
+      <a href="#" class="active"><i class="far fa-building"></i>&emsp;Companies</a>
+      <a href="#"><i class="fas fa-envelope"></i>&emsp;Messages</a>
+      <a href="/edit"><i class="fas fa-sliders-h"></i>&emsp;Account settings</a>
+      <a href="/edit"><i class="fas fa-key"></i>&emsp;Change password</a>
+      <a href="/logout" data-method="delete" rel="nofollow"><i class="fas fa-sign-out-alt"></i>&emsp;Sign out</a>
+    </nav>
+  </section>
+  <nav class="nav-dashboard">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "Wefactor", root_path, class: "navbar-brand" %>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-top">
+
+        <ul class="nav navbar-nav navbar-right">
+          <a href="/edit" class="text-primary no-bullet"><i class="fas fa-plus"></i>&emsp;Add Company</a> 
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+
+
