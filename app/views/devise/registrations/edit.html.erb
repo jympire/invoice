@@ -46,8 +46,55 @@
             </div>
             
           <hr>
+            <% if current_user.phone_number.blank? %>
+            <div class="row">
+              <div class="col-sm-8">
+                <h4>Add Phone Number</h4>
+                <br>
+                <small>Add your phone number to secure your account.</small>
+              </div>
+                          
+          <br>
+                           
+              <div class="col-sm-4">
+                <button class="btn btn-save" data-toggle="modal" data-target="#update-phone">Add Phone Number</button>   
+              </div>            
+            </div>
+            
+          <hr>
+            <% elsif current_user.phone_verified == false %>
+            <div class="row">
+              <div class="col-sm-8">
+                <h4>Your Phone Number</h4>
+                <br>
+                <small><%= current_user.phone_number %></small>
+              </div>
+                          
+          <br>
+                           
+              <div class="col-sm-4">
+                <button class="btn btn-save" data-toggle="modal" data-target="#verify-phone">Verify Phone Number</button>  
+              </div>            
+            </div>
+          <hr>
+            <% else %>
+              <div class="row">
+              <div class="col-sm-8">
+                <h4>Your Phone Number</h4>
+                <br>
+                <small><%= current_user.phone_number %></small>
+              </div>
+                          
+          <br>
+                           
+              <div class="col-sm-4">
+                <p class=" no-bullet text-primary">Phone Number Verified<span class="pull-right"><i class="fa fa-check-circle-o"></i></span></p>  
+              </div>            
+            </div>
+          <hr>
+            <% end %> 
 
-            <h4>Cancel my account</h4><small>You are not subscribed to a plan.</small>
+            <h4>Cancel my account</h4>
 
             <p><small><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure you want to cancel your account?" }, method: :delete, class: "btn btn-primary" %></small></p>
 
@@ -154,6 +201,57 @@
           </div>
           <br>
         <% end %> 
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL FOR PHONE NUMBER -->
+<div id="update-phone" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Phone Number</h4>
+      </div>
+
+      <div class="modal-body">
+        <%= form_for current_user, url: update_phone_number_user_path(current_user) do |f| %>
+            <div class="form-group">
+              <%= f.phone_field :phone_number, class: "form-control", placeholder: "Your Phone Number" %>
+            </div>
+            <div class="text-center">
+              <%= f.submit "Save", class: "btn btn-primary" %>
+            </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODAL FOR VERIFICATION -->
+<div id="verify-phone" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Verification Code</h4>
+      </div>
+
+      <div class="modal-body">
+        <%= form_for current_user, url: verify_phone_number_user_path(current_user), method: :post do |f| %>
+            <div class="form-group">
+              <%= f.text_field :pin, class: "form-control", placeholder: "Your Pin", value: "" %>
+            </div>
+            <div class="text-center">
+              <%= f.submit "Verify", class: "btn btn-primary" %>
+            </div>
+        <% end %>
       </div>
 
     </div>

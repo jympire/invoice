@@ -28,5 +28,11 @@ Rails.application.routes.draw do
              path_names: {sign_in: 'login', sign_out: 'logout', edit: 'edit', sign_up: 'register'},
              controllers: {registrations: 'registrations'}
   
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    member do
+      post '/verify_phone_number' => 'users#verify_phone_number'
+      patch '/update_phone_number' => 'users#update_phone_number'
+    end
+  end
+  
 end
