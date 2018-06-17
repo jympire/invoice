@@ -1,3 +1,45 @@
 <div class="container content">
-  
+  <div class="row">
+    <div class="col-md-3">
+      <div class="center">
+        <br>
+        <center><%= image_tag avatar_url(@user), class: "avatar-large" %></center>
+        <br>
+        <center><%= @user.first_name %> <%= @user.last_name %></center>
+        <% if @user == current_user %>
+          <br>
+          <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-default btn-block" %>
+        <% end %>
+
+      </div>
+      <br>
+      <div class="panel panel-default">
+        <div class="panel-heading">Verified info</div>
+        <div class="panel-body">
+          <ul class="sidebar-list">
+            <% if @user.confirmation_token %>
+              <li class="no-bullet">Email Address<span class="pull-right text-primary"><i class="fa fa-check-circle-o"></i></span></li>
+            <% end %>
+            <% if @user.phone_verified %>
+              <li class="no-bullet">Phone Number<span class="pull-right text-primary"><i class="fa fa-check-circle-o"></i></span></li>
+            <% end %>  
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">About Me</div>
+        <div class="panel-body">
+          <% if !@user.title.blank? %>
+          <h5 class="about-me"><strong>Title</strong></h5><div class="small"><%= @user.title %></div>
+          <br>
+          <% else %>
+          <% end %>  
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-9">
+      
+    </div>
+  </div> 
 </div>

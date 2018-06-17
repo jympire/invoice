@@ -40,12 +40,6 @@ body {
     padding-top: 100px;
   }
   
-  .no-bullet {
-    li {
-      list-style: none !important;
-      text-decoration: none !important;
-    }
-  }
   
   .text-primary {
     color: #3ca8ff !important;
@@ -55,6 +49,11 @@ body {
     border: 1px solid $border;
     margin-bottom: 25px;
   }
+}
+
+.no-bullet {
+  list-style: none !important;
+  text-decoration: none !important;
 }
 
 
@@ -385,4 +384,32 @@ input[type="checkbox"]:checked:before {
 
 .avatar-full {
   width: 100%;
+}
+
+
+/* Sidebar */
+.sidebar-list {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-item {
+  padding: 5px 0;
+  color: $dark;
+}
+
+.sidebar-link {
+  color: $dark;
+  text-decoration: none;
+}
+
+.sidebar-link:hover, .sidebar-link:focus {
+  color: $dark;
+  text-decoration: none;
+}
+
+.active.sidebar-link {
+  color: $dark;
+  font-weight: bold;
+  text-decoration: none;
 }

@@ -88,7 +88,7 @@
           <br>
                            
               <div class="col-sm-4">
-                <p class=" no-bullet text-primary">Phone Number Verified<span class="pull-right"><i class="fa fa-check-circle-o"></i></span></p>  
+                <p class=" no-bullet">Phone Number Verified<span class="pull-right text-primary"><i class="fa fa-check-circle-o"></i></span></p>  
               </div>            
             </div>
           <hr>
@@ -141,7 +141,7 @@
           
           <div class="form-group">
             <%= f.label :title %><br />
-            <%= f.text_field :title, :class => "validate", :placeholder => "What do you do?", class: "form-control" %>
+            <%= f.text_field :title, :class => "validate", :placeholder => "CEO @ Awesome Co", class: "form-control" %>
           </div>
           
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
