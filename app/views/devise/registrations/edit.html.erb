@@ -88,7 +88,7 @@
           <br>
                            
               <div class="col-sm-4">
-                <p class=" no-bullet">Phone Number Verified<span class="pull-right text-primary"><i class="fa fa-check-circle-o"></i></span></p>  
+                <p class=" no-bullet">Phone Number Verified<span class="text-primary">&emsp;<i class="far fa-check-circle"></i></span></p>  
               </div>            
             </div>
           <hr>
@@ -221,7 +221,7 @@
       <div class="modal-body">
         <%= form_for current_user, url: update_phone_number_user_path(current_user) do |f| %>
             <div class="form-group">
-              <%= f.phone_field :phone_number, class: "form-control", placeholder: "Your Phone Number" %>
+              <%= f.text_field :phone_number, class: "form-control", placeholder: "Your Phone Number" %>
             </div>
             <div class="text-center">
               <%= f.submit "Save", class: "btn btn-primary" %>

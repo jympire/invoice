@@ -1,0 +1,147 @@
+<%= form_for(company) do |f| %>
+  
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="form-group">
+        <%= f.label :company_name %>
+        <%= f.text_field :company_name, :class => "validate", :placeholder => "Legal Business Name", class: "form-control", required: true %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :company_phone %>
+          <%= f.text_field :company_phone, :class => "validate", :placeholder => "Company Phone", class: "form-control", required: true %>
+        </div>  
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :trade_name %>
+          <%= f.text_field :trade_name, :class => "validate", :placeholder => "Trade Name (Optional)", class: "form-control" %>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="form-group">
+        <%= f.label :company_address %>
+        <%= f.text_field :company_address, :class => "validate", :placeholder => "Company Address", class: "form-control", required: true %>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :company_suite %>
+          <%= f.text_field :company_suite, :class => "validate", :placeholder => "Apt or Suite", class: "form-control", required: true %>
+        </div>  
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :company_city %>
+          <%= f.text_field :company_city, :class => "validate", :placeholder => "City", class: "form-control", required: true %>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :company_state %>
+          <%= f.text_field :company_state, :class => "validate", :placeholder => "State", class: "form-control", required: true %>
+        </div> 
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :company_zip %>
+          <%= f.text_field :company_zip, :class => "validate", :placeholder => "Zip Code", class: "form-control", required: true %>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :tax_id %>
+          <%= f.text_field :tax_id, :class => "validate", :placeholder => "Tax ID/EIN or SSN", class: "form-control", required: true %>
+        </div> 
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :entity_type %>
+          <%= f.text_field :entity_type, :class => "validate", :placeholder => "Entity Type", class: "form-control", required: true %>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :annual_revenue %>
+          <%= f.text_field :annual_revenue, :class => "validate", :placeholder => "Annual Revenue", class: "form-control", required: true %>
+        </div> 
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :sell_to %>
+          <%= f.text_field :sell_to, :class => "validate", :placeholder => "You Sell To", class: "form-control", required: true %>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :amount %>
+          <%= f.text_field :amount, :class => "validate", :placeholder => "How much do you need?", class: "form-control", required: true %>
+        </div> 
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :financing_time %>
+          <%= f.text_field :financing_time, :class => "validate", :placeholder => "How fast do you need the funds?", class: "form-control", required: true %>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :financing_type %>
+          <%= f.text_field :financing_type, :class => "validate", :placeholder => "Financing Type", class: "form-control", required: true %>
+        </div> 
+      </div>
+      <br><br>
+      <div class="col-md-6">  
+      </div>
+    </div>
+  </div>
+    
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="actions">
+          <%= f.submit "Create Company", :class => "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>

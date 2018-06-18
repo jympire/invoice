@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :companies
   root 'pages#home'
 
   get 'line-of-credit' , to: 'pages#line_of_credit'

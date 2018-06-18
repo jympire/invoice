@@ -7,6 +7,8 @@ class User < ApplicationRecord
   validates :first_name, presence: true, length: {maximum: 25}
   validates :last_name, presence: true, length: {maximum: 25}
   
+  has_many :companies
+  
   def generate_pin
     self.pin = SecureRandom.hex(2)
     self.phone_verified = false
