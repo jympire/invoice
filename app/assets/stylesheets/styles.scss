@@ -49,6 +49,10 @@ body {
     color: $primary !important;
   }
   
+  .text-purple {
+    color: $myPurple !important;
+  }
+  
   .text-white {
     color: $white;
   }
@@ -81,14 +85,6 @@ body {
   border-bottom: 3px solid $border;
   padding-top: 5px;
   padding-bottom: 5px;
-}
-
-.navbar-default.user {
-  background-color: $white !important;
-  border-radius: 0px;
-  border: none;
-  border-bottom: 3px solid $border;
-  padding-top: 10px;
 }
 
 .nav-dashboard {
